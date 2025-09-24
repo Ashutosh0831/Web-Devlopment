@@ -18,3 +18,13 @@ form.addEventListener("submit", function (e) {
 
   form.reset();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moreBtn = document.getElementById("moreBtn");
+  const navList = document.getElementById("navList");
+
+  moreBtn.addEventListener("click", function () {
+    navList.classList.toggle("show");
+  });
+});
+

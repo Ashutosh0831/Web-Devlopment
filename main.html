@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="icon.ico" />
+    <link rel="icon" href="images/icon.ico" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#edu">My Education</a></li>
-          <li><a href="#proj">Projects</a></li>
-          <li><a href="#goal">My Goals</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
+  <nav>
+    <button id="moreBtn">☰</button>
+    <ul id="navList">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#edu">My Education</a></li>
+      <li><a href="#proj">Projects</a></li>
+      <li><a href="#goal">My Goals</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
     <div class="head" id="home" data-aos="fade-up">
       <div class="head-text">
         <h1>ASHUTOSH PANDEY</h1>
         <p>Web Developer | Python Developer</p>
       </div>
-      <img src="ashhhuu.jpg" alt="not found" />
+      <img src="images/ashhhuu.jpg" alt="not found" />
     </div>
     <div class="about" id="about" data-aos="fade-up">
       <h2>About Me</h2>
@@ -69,11 +70,11 @@
         <li>SQLite</li>
       </ul>
       <div class="skill-img">
-        <img src="python.png" alt="" /><img src="html.png" alt="" /><img
-          src="css.png"
+        <img src="images/python.png" alt="" /><img src="images/html.png" alt="" /><img
+          src="images/css.png"
           alt=""
-        /><img src="java.png" alt="" /><img src="django.png" alt="" /><img
-          src="mysql.png"
+        /><img src="images/java.png" alt="" /><img src="images/django.png" alt="" /><img
+          src="images/mysql.png"
           alt=""
         />
       </div>
@@ -185,7 +186,7 @@
     <div class="contact" id="contact">
       <h3>Contacts...</h3>
       <h5>Fill the form , I will connect you soon.</h5>
-      <form action="home" method="post" id="contactForm">
+      <form method="post" id="contactForm">
         <label for="name">Full Name::</label>
         <input
           type="text"

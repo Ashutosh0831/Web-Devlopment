@@ -179,6 +179,26 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Base styles */
+#moreBtn {
+  display: none;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+
 /* Responsive tweaks */
 @media screen and (max-width: 768px) {
   .head {
@@ -204,4 +224,32 @@ footer a:hover {
   section, .about, .skill, .Education, .Projects, .Goals, .contact {
     padding: 60px 20px;
   }
+
+ #navList {
+    display: none;
+    flex-direction: column;
+    background-color: #5e4f4f;
+    padding: 10px;
+  }
+
+  #moreBtn {
+    display: block;
+  }
+
+  #navList.show {
+    display: flex;
+  }
+
+  #moreBtn {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    float: right;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
 }
+
