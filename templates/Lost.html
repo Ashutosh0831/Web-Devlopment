@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/form_style.css">
+    <title>Lost Report</title>
+</head>
+<body>
+    <!-- LOST REPORT HERE-->
+    <h1>Report your Lost Item here.</h1>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <label for="contact_info">Contact Information:</label>
+        <input type="text" id="contact_info" name="contact_info" required>
+        <label for="date_lost">Date Lost:</label>
+        <input type="date" id="date_lost" name="date_lost" >
+        <label for="location_lost">Location Lost:</label>
+        <input type="text" id="location_lost" name="location_lost">
+        <label for="img">Media</label>
+        <input type="file" id="img" name="img" accept="image/*,video/*">
+        <br>
+        <button type="submit">Submit Report</button>
+</body>
+</html>

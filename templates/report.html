@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="icon" href="/static/image/student_3540.png.ico">
+    <link rel="stylesheet" href="/static/css/main_style.css">
+    <link rel="stylesheet" href="/static/css/form_style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+</head>
+{% include '_header.html' %}
+<body>
+    <h1>Here you can submit your issue by filling the required data.</h1>
+    <form action="{% url 'report'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="first-name">Name :: </label>
+        <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+        <input type="text" id="last-name" name="last-name" placeholder="last name"><br><br>
+        <label for="email">E-mail :: </label>
+        <input type="email" id="email" name="email" placeholder="asdfg@gmail.com" required><br><br>
+        <label for="phone">Phone Number :: </label>
+        <input type="number" id="phone" name="number" required><br><br>
+        <label for="course">Course::</label>
+        <select name="course" id="course">
+            <option value="B.tech">B.Tech</option>
+            <option value="B-pharma">B.Pharma</option>
+            <option value="BCA">B.C.A.</option>
+            <option value="MCA">M.C.A.</option>
+            <option value="BBA">B.B.A.</option>
+            <option value="MBA">M.B.A.</option>
+            <option value="Other">Other</option>
+        </select><br><br> 
+        <label for="description">Description :: </label>
+        <textarea name="description" id="description" cols="80" rows="5" placeholder="Describe your problem here" ></textarea><br><br> 
+        <label for="media">Upload Image :: </label>
+        <input type="file" id="media" value="media" name="media"><br><br>
+        <input type="submit" value="submit" name="submit">
+    </form>
+</body>
+</html>

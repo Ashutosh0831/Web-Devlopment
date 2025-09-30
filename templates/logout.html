@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/image/student_3540.png.ico">
+    <title>Logout Page</title>
+    <style>
+        body{
+            background:linear-gradient(to left, #54b0cf,#499e9e)
+        }
+        .log{
+            margin: 300px 400px 300px 550px;
+        }
+        .button {
+           background-color: #4CAF50; /* Green */
+           color: white;
+           padding: 10px 20px;
+           text-decoration: none;
+           border-radius: 5px;
+           display: inline-block;
+        }
+        .button:hover {
+           background-color: #45a049;
+        }
+        @media (max-width: 600px){
+            .log{
+                display: flex;
+                margin: 100px 200px 100px 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="log">
+        <h1>Thanks for visiting our website.</h1>
+        <a href="{% url 'main' %}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

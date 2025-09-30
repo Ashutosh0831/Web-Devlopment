@@ -1,0 +1,138 @@
+/* Body and container */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #150d74, #095277);
+  color: #333;
+}
+
+/* Form styling */
+form {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f4fdc1;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form heading */
+form h1 {
+  text-align: center;
+  color: #c6631d;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #922828;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Submit button */
+button[type="submit"] {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2575fc;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #6a11cb;
+  transform: scale(1.02);
+}
+
+/* Login link */
+form p {
+  text-align: center;
+  color: #151515;
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+form a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Message styling */
+h5 {
+  text-align: center;
+  color: #d80032;
+  background-color: #151515;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 20px auto;
+  max-width: 600px;
+  animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fff3cd;
+  }
+  50% {
+    background-color: #ffeeba;
+  }
+  100% {
+    background-color: #fff3cd;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  form {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  form h1 {
+    font-size: 1.8em;
+  }
+}

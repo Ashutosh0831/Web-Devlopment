@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="icon" href="/static/image/student_3540.ico">
+    <link rel="stylesheet" href="/static/css/main_style.css">
+    <link rel="stylesheet" href="/static/css/form_style.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+
+    
+    <form method="post" action="{% url 'user_login' %}">
+        <h1>Login Here</h1>
+        {% csrf_token %}
+        <label for="username">Username::</label>
+        <input type="text" id="username" name="username" placeholder="Username"  required>
+        <br>
+        <label for="password">Password::</label>
+        <input type="password" id="password" name="password"  autocomplete="new-password" required> 
+        <br><br>
+        <button type="submit">Log in</button>
+        <br><br>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <p>Don't have an account?
+        <a href="{% url 'register' %}">Register Here</a>
+        </p>
+        <p><a href="{% url 'main' %}">Back to Home</a>
+    </form>
+</body>
+</html>
